@@ -1,7 +1,11 @@
-//your JS code here. If required.
-let status= document.querySelector("#status");
-let enterBtn= document.querySelector("#enterBtn");
+const enterBtn = document.querySelector("#enterBtn");
 
 enterBtn.addEventListener("click", () => {
-    status.innerHTML = "<h1>Entered Metaverse</h1>";
+    const status = document.querySelector("#status");
+
+    const heading = document.createElement("h1");
+    heading.id = "status";                   // keep the id so tests can still find it
+    heading.textContent = "Entered Metaverse";
+
+    status.replaceWith(heading);
 });
